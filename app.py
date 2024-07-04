@@ -497,7 +497,7 @@ if st.session_state["authentication_status"]:
                         formatted_scorecard_df['remote_support_0_1'].replace('N/A', -1, inplace=True)
 
                         # Upload the processed DataFrame to MSSQL
-                        # upload_csv_to_mssql(formatted_scorecard_df, mssql_server, mssql_database, mssql_username, mssql_password, mssql_table)
+                        upload_csv_to_mssql(formatted_scorecard_df, mssql_server, mssql_database, mssql_username, mssql_password, mssql_table)
 
                 # Zip the output files with the correct structure
                 def collect_output_files(output_folder):
