@@ -31,8 +31,8 @@ st.set_page_config(page_title="QA on Agent Calls", page_icon="💬", layout="cen
 
 # Load environment variables
 load_dotenv()
-connection_string = os.getenv("TEST_BLOB_CONNECTION_STRING")
-container_name = "test"
+connection_string = os.getenv("AZURE_BLOB_CONNECTION_STRING")
+container_name = "qacallagent"
 blob_name = "config/config.yaml"
 
 # Initialize the BlobServiceClient
