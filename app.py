@@ -228,7 +228,7 @@ if st.session_state["authentication_status"]:
             zip_files_with_structure(uploaded_files, zip_name, date_)
 
             # Upload the zipped file to Azure Blob Storage in the correct directory
-            blob_path = os.path.join("input_audio_files", f"{client_name}.zip")
+            blob_path = os.path.join(f"{client_name}_input.zip")
             upload_to_azure_blob_storage(azure_blob_connection_string, azure_blob_container_name, zip_name, blob_path)
 
             # Download and unzip the file for processing
@@ -513,7 +513,7 @@ if st.session_state["authentication_status"]:
                 zip_files_with_structure(output_files, output_zip_name, date_)
 
                 # Upload the zipped output files to Azure Blob Storage in the correct directory
-                output_blob_path = os.path.join("output_files", f"{client_name}_output.zip")
+                output_blob_path = os.path.join(f"{client_name}_output.zip")
                 upload_to_azure_blob_storage(azure_blob_connection_string, azure_blob_container_name, output_zip_name, output_blob_path)
 
             with st.sidebar:
