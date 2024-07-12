@@ -387,7 +387,7 @@ if st.session_state["authentication_status"]:
                 IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = '{table}')
                 CREATE TABLE {table} (
                     id INT PRIMARY KEY IDENTITY(1,1),
-                    filename_ VARCHAR(255),
+                    filename_ VARCHAR(MAX),
                     transcript_location VARCHAR(MAX),
                     scorefile_location VARCHAR(MAX),
                     agent_email_id VARCHAR(MAX),
