@@ -161,7 +161,7 @@ if st.session_state["authentication_status"]:
 
         with st.sidebar:
             client_name = st.selectbox("**Select client name here 🚩**", ["Mitsui", "Northpoint", "CDI"])
-            date_ = st.text_input("**Add date here (eg. format:31_10_24)** 🚩")
+            date_ = st.text_input("**Add date here (eg. format: 31_10_24)** 🚩")
             rfp = st.file_uploader("**Upload Audio File** 🚩", accept_multiple_files=True)
 
         logger.info("Initialized session state")
